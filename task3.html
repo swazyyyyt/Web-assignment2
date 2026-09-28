@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 3 — Three layouts, one markup</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/task3.css">
+</head>
+<body>
+<div class="page">
+  <h1 class="page__title">Three layouts, one markup</h1>
+  <p class="page__lead">Change the class on the container below: <code>items--grid</code>, <code>items--list</code> or <code>items--magazine</code>.</p>
+
+  <!-- switch the layout by changing ONLY this class -->
+  <main class="items items--grid">
+    <article class="item">
+      <img class="item__img" src="img/01.svg" alt="">
+      <div class="item__body">
+        <h2 class="item__title">Grid or Flexbox?</h2>
+        <p class="item__text">Short and sweet.</p>
+      </div>
+      <time class="item__date" datetime="2026-09-01">1 Sep 2026</time>
+    </article>
+    <article class="item">
+      <img class="item__img" src="img/02.svg" alt="">
+      <div class="item__body">
+        <h2 class="item__title">Why fluid layouts beat breakpoints in most everyday interfaces</h2>
+        <p class="item__text">Intrinsic sizing lets the browser decide how many columns fit. You describe the ideal size of an item and the layout adapts on its own, from a small phone to a wide desktop monitor, with no media queries at all.</p>
+      </div>
+      <time class="item__date" datetime="2026-09-03">3 Sep 2026</time>
+    </article>
+    <article class="item">
+      <img class="item__img" src="img/03.svg" alt="">
+      <div class="item__body">
+        <h2 class="item__title">Ten tiny CSS tricks</h2>
+        <p class="item__text">Small habits that make stylesheets shorter and calmer to read.</p>
+      </div>
+      <time class="item__date" datetime="2026-09-05">5 Sep 2026</time>
+    </article>
+    <article class="item">
+      <img class="item__img" src="img/04.svg" alt="">
+      <div class="item__body">
+        <h2 class="item__title">A gentle introduction to minmax()</h2>
+        <p class="item__text">One function, two limits: a minimum that protects the content and a maximum that shares the free space.</p>
+      </div>
+      <time class="item__date" datetime="2026-09-08">8 Sep 2026</time>
+    </article>
+    <article class="item">
+      <img class="item__img" src="img/05.svg" alt="">
+      <div class="item__body">
+        <h2 class="item__title">Supercalifragilisticexpialidocious-length-titles-and-how-to-survive-them</h2>
+        <p class="item__text">Long unbroken words are a real test for every layout. Use overflow-wrap so they never push the page sideways.</p>
+      </div>
+      <time class="item__date" datetime="2026-09-10">10 Sep 2026</time>
+    </article>
+    <article class="item">
+      <img class="item__img" src="img/06.svg" alt="">
+      <div class="item__body">
+        <h2 class="item__title">Centering things</h2>
+        <p class="item__text">Yes, it is finally easy.</p>
+      </div>
+      <time class="item__date" datetime="2026-09-12">12 Sep 2026</time>
+    </article>
+    <article class="item">
+      <img class="item__img" src="img/07.svg" alt="">
+      <div class="item__body">
+        <h2 class="item__title">Designing with gap instead of margins</h2>
+        <p class="item__text">Gap belongs to the container, so items stay free of spacing hacks and the first and last item need no special cases. It also keeps the markup clean and the rules easy to reason about when the layout changes.</p>
+      </div>
+      <time class="item__date" datetime="2026-09-15">15 Sep 2026</time>
+    </article>
+    <article class="item">
+      <img class="item__img" src="img/08.svg" alt="">
+      <div class="item__body">
+        <h2 class="item__title">Spanning rows and columns</h2>
+        <p class="item__text">A single item can take several tracks while the rest of the grid flows around it.</p>
+      </div>
+      <time class="item__date" datetime="2026-09-17">17 Sep 2026</time>
+    </article>
+    <article class="item">
+      <img class="item__img" src="img/09.svg" alt="">
+      <div class="item__body">
+        <h2 class="item__title">Typography that reads well</h2>
+        <p class="item__text">Comfortable line height, sensible measure, and a calm scale go a long way.</p>
+      </div>
+      <time class="item__date" datetime="2026-09-19">19 Sep 2026</time>
+    </article>
+    <article class="item">
+      <img class="item__img" src="img/10.svg" alt="">
+      <div class="item__body">
+        <h2 class="item__title">Aspect ratio without the padding hack</h2>
+        <p class="item__text">The aspect-ratio property keeps images and cards in proportion while the width changes fluidly with the window, replacing an old and rather awkward trick.</p>
+      </div>
+      <time class="item__date" datetime="2026-09-22">22 Sep 2026</time>
+    </article>
+    <article class="item">
+      <img class="item__img" src="img/11.svg" alt="">
+      <div class="item__body">
+        <h2 class="item__title">Dense packing</h2>
+        <p class="item__text">grid-auto-flow: dense fills holes.</p>
+      </div>
+      <time class="item__date" datetime="2026-09-24">24 Sep 2026</time>
+    </article>
+    <article class="item">
+      <img class="item__img" src="img/12.svg" alt="">
+      <div class="item__body">
+        <h2 class="item__title">What we learned building three layouts from one markup</h2>
+        <p class="item__text">The markup describes what the content is. The stylesheet decides how it looks. Switching a single class on the container is enough to turn a card grid into a compact list or a magazine front page, and every mode keeps working with short titles, long titles and everything in between.</p>
+      </div>
+      <time class="item__date" datetime="2026-09-26">26 Sep 2026</time>
+    </article>
+  </main>
+</div>
+</body>
+</html>
