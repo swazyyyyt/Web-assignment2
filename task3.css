@@ -1,0 +1,40 @@
+/* task3.css — one markup, three layouts. Grid on the container, Flexbox inside the item. */
+
+.page__lead code { background: var(--surface); border: 1px solid var(--border); padding: 0.1rem 0.4rem; border-radius: 0.35rem; }
+.items { display: grid; gap: var(--space-2); }
+
+/* ---------- item (shared by all modes): Flexbox ---------- */
+.item {
+  min-width: 0;                          /* lets long words shrink instead of stretching the grid */
+  display: flex; flex-direction: column; gap: var(--space-2);
+  padding: var(--space-2);
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  overflow-wrap: anywhere;
+}
+.item__img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 0.5rem; }
+.item__body { flex: 1; }
+.item__title { font-size: 1.1rem; }
+.item__text { margin: 0; color: var(--muted); }
+.item__date { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+
+/* ---------- 1. grid of cards: auto-fill + minmax, columns follow the width ---------- */
+.items--grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); }
+
+/* ---------- 2. compact list: one grid column, every item is a flex row ---------- */
+.items--list { grid-template-columns: 1fr; }
+.items--list .item { flex-direction: row; flex-wrap: wrap; align-items: center; }
+.items--list .item__img { flex: none; width: clamp(4rem, 20%, 9rem); aspect-ratio: 4 / 3; }
+.items--list .item__body { flex: 1 1 10rem; }
+.items--list .item__date { margin-left: auto; }   /* date at the right edge of the row */
+
+/* ---------- 3. magazine: dense grid, the first item spans 2 columns x 2 rows ---------- */
+.items--magazine {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr));
+  grid-auto-columns: minmax(0, 1fr);     /* if only one column fits, the lead's 2nd column stays flexible */
+  grid-auto-flow: dense;
+}
+.items--magazine .item:first-child { grid-column: span 2; grid-row: span 2; padding: var(--space-3); }
+.items--magazine .item:first-child .item__img { flex: 1 1 auto; aspect-ratio: auto; min-height: 0; }
+.items--magazine .item:first-child .item__title { font-size: clamp(1.4rem, 3vw, 2rem); }
+.items--magazine .item:first-child .item__text { font-size: 1.05rem; }
+.items--magazine .item:not(:first-child) .item__img { aspect-ratio: 3 / 2; }
